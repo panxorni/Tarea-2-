@@ -47,6 +47,9 @@ public abstract class Reunion {
     public Instant getHoraFin() { return horaFin; }
     public void setHoraFin(Instant horaFin) { this.horaFin = horaFin; }
 
+    public tipoReunion getTipo() { return tipo; }
+    public void setTipoReunion(tipoReunion tipo) { this.tipo = tipo; }
+
 
     //iniciar y finalizar
 
