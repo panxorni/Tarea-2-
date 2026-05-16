@@ -15,7 +15,6 @@ public abstract class Reunion {
     private tipoReunion tipo;
     // atributos de relacion
     private Empleado organizador;
-    private tipoReunion tipo;
     private List<Nota> notas;
     private List<Asistencia> asistencias;
     private List<Invitación> invitaciones;
