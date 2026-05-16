@@ -12,7 +12,7 @@ public abstract class Reunion {
     private Duration duracionPrevista;
     private Instant horaInicio;
     private Instant horaFin;
-
+    private tipoReunion tipo;
     // atributos de relacion
     private Empleado organizador;
     private tipoReunion tipo;
@@ -20,10 +20,11 @@ public abstract class Reunion {
     private List<Asistencia> asistencias;
     private List<Invitación> invitaciones;
 
-    public Reunion(Date fecha, Instant horaPrevista, Duration duracionPrevista) {
+    public Reunion(Date fecha, Instant horaPrevista, Duration duracionPrevista, tipoReunion tipo) {
         this.fecha = fecha;
         this.horaPrevista = horaPrevista;
         this.duracionPrevista = duracionPrevista;
+        this.tipo = tipo;
         this.notas = new ArrayList<>();
         this.asistencias = new ArrayList<>();
         this.invitaciones = new ArrayList<>();
