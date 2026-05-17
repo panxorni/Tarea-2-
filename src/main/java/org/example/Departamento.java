@@ -54,4 +54,7 @@ public class Departamento implements Invitable{
     public void invitar() {
         System.out.println("Invitación al departamento " + nombreDepartamento);
     }
+    public String toString(){
+        return "Departamento{ " + "Nombre departamento:'" + nombreDepartamento + "'" + ", cantidad de empleados: " + cantidadEmpleados() + "}";
+    }
 }
