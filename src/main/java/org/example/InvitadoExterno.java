@@ -32,6 +32,7 @@ public class InvitadoExterno implements Invitable{
         this.correoElectronico = correoElectronico;
     }
 
+
     public String nombreInvitable() {
         return nombreCompleto;
     }
