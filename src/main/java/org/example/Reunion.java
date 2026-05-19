@@ -28,6 +28,8 @@ public abstract class Reunion {
         this.notas = new ArrayList<>();
         this.asistencias = new ArrayList<>();
         this.invitaciones = new ArrayList<>();
+        this.horaInicio = null;
+        this.horaFin = null;
     }
 
     //getters y setters
@@ -104,8 +106,46 @@ public abstract class Reunion {
     }
     //metodos relacion
 
+    public void registroInvitación(Invitación i){
+        if (i != null){
+            invitaciones.add(i);
+        }
+    }
 
+    //Retraso hereda de Asistencia por lo que este metodo sirve para ambos casos
+    public void registroAsistencia(Asistencia a){
+        if (a != null){
+            asistencias.add(a);
+        }
+    }
 
+    public int getNumeroInvitados(){
+        return invitaciones.size();
+    }
 
+    public int getNumeroParticipantes(){
+        return asistencias.size();
+    }
+
+    public float getPorcentajeAsistentes(){
+        if (invitaciones.isEmpty()){ //no se puede dividir por 0
+            return 0;
+        }
+        return(((float) asistencias.size() / invitaciones.size())*100);
+    }
+
+    public List<Asistencia> getAsistentes(){
+        return asistencias;
+    }
+
+    public List<Retraso> getRetrasos(){
+        List<Retraso> retrasos = new ArrayList<>();
+        for (Asistencia a:asistencias){
+            if (a instanceof Retraso){
+                retrasos.add((Retraso) a);
+            }
+        }
+        return retrasos;
+    }
 }
 
